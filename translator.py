@@ -11,7 +11,7 @@ for words in word_file:
 frenchdict=dict()
 for word in word_list:
     result=translator.translate(word)
-    frenchdict[word]=result
+    frenchdict[word]=result.lower()
 print(frenchdict)                               #translated english words are stored in dictionary form
 file=open('frenchdictionary','wb')              
 pickle.dump(frenchdict,file)                    #dictionary is dumped to a file called finaldictionary
