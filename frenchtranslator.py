@@ -1,5 +1,6 @@
 from translate import Translator
-import pickle
+import pickle,time
+start = time.time()
 to_lang = 'fr'
 secret = '5deadcc9f92542aba66edd0cbfa0fbc3'     #security key from microsof azure cloud for using translation service
 translator = Translator(provider='microsoft', to_lang=to_lang, secret_access_key=secret)
@@ -16,3 +17,5 @@ print(frenchdict)                               #translated english words are st
 file=open('frenchdictionary','wb')              
 pickle.dump(frenchdict,file)                    #dictionary is dumped to a file called finaldictionary
 file.close()
+end = time.time()
+print("Runtime of the program is",float(end-start))
