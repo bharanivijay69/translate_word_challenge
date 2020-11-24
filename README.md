@@ -22,3 +22,8 @@ What is the expected output?
     5. Time taken to process
     6. Memory taken to process
 
+frenchtranslate.py
+This script is to create a dictionary file. This dictionary file contains the english to french word in dictionary datatype. This script after running generates a pickle file which contains the dictionary. This pickle file can be later used to get the dictionary,so that we dont want to translate everytime to get the dictionary.
+
+final_program.py
+This program gets the t8.shakespeare.txt as input. The output is stores in result.txt. This progarm is INCOMPLETE, as the format of the result is not matching with the original format of the text file.
