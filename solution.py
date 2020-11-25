@@ -6,7 +6,6 @@ final_dictionary = pickle.load(file_to_read)
 count={}
 file_content = open("t8.shakespeare.txt").read()
 tokens = nltk.word_tokenize(file_content)
-print(tokens)
 final=[]
 for word in tokens:
     if word in final_dictionary:
@@ -25,3 +24,7 @@ f.close()
 print("Number of time the words are replaced",count)
 end = time.time()
 print("Runtime of the program is",float(end-start))
+import os
+import psutil
+process = psutil.Process(os.getpid())
+print("Memory used by this program is",(process.memory_info().rss))
