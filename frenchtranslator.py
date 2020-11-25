@@ -19,3 +19,7 @@ pickle.dump(frenchdict,file)                    #dictionary is dumped to a file 
 file.close()
 end = time.time()
 print("Runtime of the program is",float(end-start))
+import os
+import psutil
+process = psutil.Process(os.getpid())
+print("Memory used by this program is",(process.memory_info().rss))
