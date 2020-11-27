@@ -10,14 +10,17 @@ for words in word_file:
     temp=words.rstrip('\n')
     word_list.append(temp)
 frenchdict=dict()
+count=0
 for word in word_list:
     result=translator.translate(word)
     frenchdict[word]=result.lower()
-print(frenchdict)                               #translated english words are stored in dictionary form
+    count=count+1
+#print(frenchdict)                               #translated english words are stored in dictionary form
 file=open('frenchdictionary','wb')              
 pickle.dump(frenchdict,file)                    #dictionary is dumped to a file called finaldictionary
 file.close()
 end = time.time()
+print("The number of words translated is ", count)
 print("Runtime of the program is",float(end-start))
 import os
 import psutil
